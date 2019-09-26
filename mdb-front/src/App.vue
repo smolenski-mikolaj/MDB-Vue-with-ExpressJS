@@ -43,23 +43,23 @@ export default {
   },
   methods: {
     getTodos() {
-      apiService.getTodos().then(data => {
-        this.todos = data
+      apiService.getTodos().then(response => {
+        console.log(response.message)
+        this.todos = response.data
       })
     },
     createTodo(todo) {
       apiService.createTodo(todo).then(
-        result => {
+        request => {
+          console.log(request.data.message)
           this.getTodos()
-        },
-        error => {
-          this.showError = true
         }
       );
     },
     deleteTodo(todo) {
       apiService.deleteTodo(todo).then(response => {
         if (response.status === 200) {
+          console.log(response.data.message)
           this.getTodos()
         }
       })
