@@ -31,12 +31,12 @@
 npm install
 ```
 
-### Runs Express Server
+### Express Server (port 4000)
 ```
 npm start
 ```
 
-### Runs Vue CLI (another terminal)
+### Vue CLI server (another terminal / port 8080)
 ```
 cd ./mdb-front
 npm start
